@@ -1,0 +1,9 @@
+@import "./purple.css";
+
+:root {
+    --bg-color:  #ffeeff;
+    --side-bar-bg-color: #ffccff;
+
+    --link-color: #ff33ff;
+    --code-color: #ff33ff;
+}
