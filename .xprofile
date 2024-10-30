@@ -1,0 +1,4 @@
+# 启用轻触
+xinput set-prop 12 "libinput Tapping Enabled" 1
+# 启用自然滚动
+xinput set-prop 12 "libinput Natural Scrolling Enabled" 1
