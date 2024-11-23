@@ -8,13 +8,14 @@ sudo pacman -S \
     fzf \
     i3 \
     kitty \
-    picom \
     ranger w3m \
     openssh \
     tmux \
     gvim \
     xinput
-yay -S typora-free
+yay -S \
+    picom-ftlabs-git \
+    typora-free
 ```
 
 ## Restore all
