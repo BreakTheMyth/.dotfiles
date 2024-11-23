@@ -6,7 +6,7 @@
 sudo pacman -S stow
 ```
 
-## Quick restore
+## Restore all
 
 ```sh
 ls | grep -v "README.md" | xargs stow --adopt
