@@ -5,16 +5,17 @@
 ```sh
 sudo pacman -S \
     stow \
-    fzf \
+    fzf xclip p7zip \
     i3 \
     kitty \
-    picom \
     ranger w3m \
     openssh \
     tmux \
     gvim \
     xinput
-yay -S typera-free
+yay -S \
+    picom-ftlabs-git \
+    typora-free
 ```
 
 ## Restore all
