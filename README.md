@@ -14,7 +14,7 @@ sudo pacman -S \
     tmux \
     gvim \
     xinput
-yay -S typera-free
+yay -S typora-free
 ```
 
 ## Restore all
