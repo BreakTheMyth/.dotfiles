@@ -1,5 +1,3 @@
-[TOC]
-
 # In case I forget
 
 ## Install dependence
