@@ -29,6 +29,7 @@ alias gs='git status'
 alias ga='git add .'
 alias gm='git commit -m'
 alias gr='git reset'
+alias gd='git diff'
 
 alias dockerd='sudo dockerd --http-proxy http://localhost:8889 --https-proxy http://localhost:8889 --no-proxy localhost,127.0.0.1'
 alias dc='docker'
