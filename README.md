@@ -12,7 +12,7 @@ sudo pacman -S \
     openssh \
     tmux \
     gvim \
-    xinput
+    xorg-xinput
 yay -S \
     picom-ftlabs-git \
     typora-free
