@@ -14,9 +14,13 @@ alias grep='grep --color=auto'
 alias pro='env HTTPS_PROXY=http://127.0.0.1:8889'
 alias c='xclip -selection clipboard'
 
+function x() {
+	7z x $1 -o$(echo $1 | awk '{sub(/\.[^.]+$/, ""); print}') 1>/dev/null
+}
+
 alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
 
-alias wifi='iwctl station wlan0 scan &&iwctl station wlan0 get-networks && read wifi  && iwctl station wlan0 connect $wifi'
+alias wifi='iwctl station wlan0 scan && iwctl station wlan0 get-networks && echo -n "connect: " && read wifi && iwctl station wlan0 connect $wifi'
 
 alias gc='git clone'
 alias gb='git branch'
@@ -24,6 +28,15 @@ alias gl='git log --oneline'
 alias gs='git status'
 alias ga='git add .'
 alias gm='git commit -m'
+alias gr='git reset'
+
+alias dockerd='sudo dockerd --http-proxy http://localhost:8889 --https-proxy http://localhost:8889 --no-proxy localhost,127.0.0.1'
+alias dc='docker'
+alias dl='docker logs -f'
+alias dp='docker ps -a'
+alias di='docker image'
+alias dv='docker volume'
+alias dn='docker network'
 
 alias si='makepkg -si'
 
@@ -60,3 +73,4 @@ PS1='\n┏$(__git_ps1 "\[\e[30;41;1m\][%s]\[\e[0m\]\n┣")\[\e[35;1m\][\w]\[\e[0
 # conda activate pytorch1.6
 
 
+source /usr/share/nvm/init-nvm.sh
