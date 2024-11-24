@@ -1,4 +1,8 @@
+# 获取触摸板id
+id=$(xinput list | grep "TouchPad" | awk -F '\t' '{print $2}' | tr -d 'id=')
+
 # 启用轻触
-xinput set-prop 12 "libinput Tapping Enabled" 1
+xinput set-prop $id "libinput Tapping Enabled" 1
+
 # 启用自然滚动
-xinput set-prop 12 "libinput Natural Scrolling Enabled" 1
+xinput set-prop $id "libinput Natural Scrolling Enabled" 1
