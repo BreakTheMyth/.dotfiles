@@ -43,6 +43,8 @@ alias si='makepkg -si'
 
 alias ks='tmux kill-session -a'
 
+alias display='xrandr --output VNC-0 --mode'
+
 # Set up fzf key bindings and fuzzy completion
 eval "$(fzf --bash)"
 export FZF_DEFAULT_OPTS='--exact --height 70% --preview "~/.fzf-preview.sh {}"'
