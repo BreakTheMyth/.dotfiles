@@ -6,7 +6,7 @@
 sudo pacman -S \
     stow \
     ranger fzf bat chafa imgcat xclip p7zip \
-    i3 \
+    i3 feh rofi scrot \
     kitty \
     ranger w3m \
     openssh \
