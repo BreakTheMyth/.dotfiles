@@ -5,7 +5,7 @@
 ```sh
 sudo pacman -S \
     stow \
-    fzf xclip p7zip \
+    ranger fzf bat chafa imgcat xclip p7zip \
     i3 \
     kitty \
     ranger w3m \
