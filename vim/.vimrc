@@ -57,3 +57,4 @@ set nu
 set rnu
 
 vmap <C-c> "+y
+nnoremap <ESC> :nohlsearch<CR>:<BS><ESC>
