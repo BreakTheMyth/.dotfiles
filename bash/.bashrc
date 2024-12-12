@@ -11,7 +11,7 @@ alias ls='ls --color=auto'
 alias ll='ls -al'
 alias grep='grep --color=auto'
 
-alias pro='env HTTPS_PROXY=http://127.0.0.1:8889 proxychains'
+alias pro='env HTTPS_PROXY=http://127.0.0.1:8889 proxychains -q'
 alias c='xclip -selection clipboard'
 
 function x() {
