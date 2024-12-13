@@ -11,8 +11,7 @@ sudo pacman -S \
     ranger w3m \
     openssh \
     tmux \
-    gvim \
-    xorg-xinput
+    gvim
 yay -S \
     picom-ftlabs-git \
     typora-free
