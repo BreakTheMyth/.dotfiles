@@ -42,17 +42,12 @@ alias dn='docker network'
 
 alias si='makepkg -si'
 
-alias ks='tmux kill-session -a'
-
 alias display='xrandr --output VNC-0 --mode'
 
 # Set up fzf key bindings and fuzzy completion
 eval "$(fzf --bash)"
 export FZF_DEFAULT_OPTS='--exact --height 70% --preview "~/.fzf-preview.sh {}"'
 export FZF_COMPLETION_TRIGGER='/'
-
-tmux &>/dev/null
-
 
 PS1='\n┏$(__git_ps1 "\[\e[30;41;1m\][%s]\[\e[0m\]\n┣")\[\e[35;1m\][\w]\[\e[0m\]\n┗━✡ '
 
@@ -78,3 +73,27 @@ PS1='\n┏$(__git_ps1 "\[\e[30;41;1m\][%s]\[\e[0m\]\n┣")\[\e[35;1m\][\w]\[\e[0
 
 
 source /usr/share/nvm/init-nvm.sh
+
+alias ks='tmux kill-session -a'
+
+if [ -z $TMUX ]; then
+	session=$(tmux ls | grep -v "(attached)" | awk -F : '{print $1}' | tail -1)
+	if [ -z $session ]; then
+		sessions=($(tmux ls | awk -F : '{print $1}'))
+		if [ ${#sessions[@]} -eq $(expr ${sessions[-1]} + 1) ]; then
+			tmux new-session -s ${#sessions[@]}
+		else
+			session=0
+			for i in $sessions; do
+				if [ $i -eq $session ]; then
+					((session++))
+				else
+					break
+				fi
+			done
+			tmux new-session -s $session
+		fi
+	else
+		tmux attach-session -t $session
+	fi
+fi
