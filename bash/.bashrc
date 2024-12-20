@@ -24,7 +24,7 @@ alias wifi='iwctl station wlan0 scan && iwctl station wlan0 get-networks && echo
 
 alias gc='git clone'
 alias gb='git branch'
-alias gl='git log --oneline'
+alias gl='git log --graph --all --decorate'
 alias gs='git status'
 alias ga='git add .'
 alias gm='git commit -m'
@@ -77,9 +77,9 @@ source /usr/share/nvm/init-nvm.sh
 alias ks='tmux kill-session -a'
 
 if [ -z $TMUX ]; then
-	session=$(tmux ls | grep -v "(attached)" | awk -F : '{print $1}' | tail -1)
+	session=$(tmux ls | grep -v "(attached)" | cut -d : -f 1 | tail -1)
 	if [ -z $session ]; then
-		sessions=($(tmux ls | awk -F : '{print $1}'))
+		sessions=($(tmux ls | cut -d : -f 1))
 		if [ ${#sessions[@]} -eq $(expr ${sessions[-1]} + 1) ]; then
 			tmux new-session -s ${#sessions[@]}
 		else
@@ -97,3 +97,4 @@ if [ -z $TMUX ]; then
 		tmux attach-session -t $session
 	fi
 fi
+
