@@ -10,6 +10,7 @@
 alias ls='ls --color=auto'
 alias ll='ls -al'
 alias grep='grep --color=auto'
+alias mount='mount -o uid=$(id -u $USER),gid=$(id -g $USER)'
 
 alias pro='env HTTPS_PROXY=http://127.0.0.1:8889 proxychains -q'
 alias c='xclip -selection clipboard'
