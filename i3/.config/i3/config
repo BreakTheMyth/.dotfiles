@@ -203,10 +203,10 @@ client.focused          #ffaaff #000000 #ffffff #ffaaff   #ffaaff
 
 default_border pixel 3
 
-bindsym $mod+F2 exec rofi -show drun -theme /usr/share/rofi/themes/iggy.rasi
+bindsym $mod+F2 exec rofi -show drun -theme /usr/share/rofi/themes/material.rasi
 bindsym Print exec scrot -e 'mv $f ~/图片/scrot'
 
-exec --no-startup-id feh --bg-scale /home/yuxing/.background.jpg
+exec --no-startup-id feh --bg-scale /home/yuxing/.wallpaper
 exec --no-startup-id fcitx5
 exec --no-startup-id picom
 
