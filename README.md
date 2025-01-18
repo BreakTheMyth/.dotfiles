@@ -13,6 +13,7 @@ sudo pacman -S \
     tmux \
     gvim \
     thefuck \
+    thunar \
     hyprland waybar hyprpaper
 yay -S \
     picom-ftlabs-git \
