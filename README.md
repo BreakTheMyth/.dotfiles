@@ -12,7 +12,8 @@ sudo pacman -S \
     openssh \
     tmux \
     gvim \
-    thefuck
+    thefuck \
+    hyprland waybar hyprpaper
 yay -S \
     picom-ftlabs-git \
     typora-free
