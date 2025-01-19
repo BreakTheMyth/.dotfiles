@@ -62,6 +62,7 @@ nnoremap <C-h> :NERDTree<CR>
 nnoremap <C-l> :q<CR><C-l>
 nnoremap <C-w> <C-w><C-w>
 nnoremap <C-f> :Files<CR>
+nnoremap <C-b> :Buffers<CR>
 
 call plug#begin()
 
@@ -69,8 +70,14 @@ Plug 'tpope/vim-sensible'
 Plug 'scrooloose/nerdtree'
 Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-gitgutter'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 
 let NERDTreeShowHidden=1
+
+let g:coc_global_extensions = [
+	\'coc-marketplace',
+	\'coc-sh',
+\]
 
