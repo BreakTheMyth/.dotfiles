@@ -74,6 +74,7 @@ PS1='\n┏$(__git_ps1 "\[\e[30;41;1m\][%s]\[\e[0m\]\n┣")\[\e[35;1m\][\w]\[\e[0
 
 
 source /usr/share/nvm/init-nvm.sh
+nvm use system &>/dev/null
 
 alias ks='tmux kill-session -a'
 
@@ -103,7 +104,7 @@ fi
 # You can use whatever you want as an alias, like for Mondays:
 eval $(thefuck --alias fk)
 
-[[ $XDGSESSION = 'x11' ]] & xset r rate 200 30
+[[ $XDGSESSION = 'x11' ]] & xset r rate 200 60
 
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
