@@ -14,6 +14,7 @@ sudo pacman -S \
     gvim \
     thefuck \
     thunar \
+    wayland xorg-xwayland \
     hyprland waybar hyprpaper
 yay -S \
     picom-ftlabs-git \
