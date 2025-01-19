@@ -58,3 +58,19 @@ set rnu
 
 vmap <C-c> "+y
 nnoremap <ESC> :nohlsearch<CR>:<BS><ESC>
+nnoremap <C-h> :NERDTree<CR>
+nnoremap <C-l> :q<CR><C-l>
+nnoremap <C-w> <C-w><C-w>
+nnoremap <C-f> :Files<CR>
+
+call plug#begin()
+
+Plug 'tpope/vim-sensible'
+Plug 'scrooloose/nerdtree'
+Plug 'junegunn/fzf.vim'
+Plug 'airblade/vim-gitgutter'
+
+call plug#end()
+
+let NERDTreeShowHidden=1
+
