@@ -58,10 +58,10 @@ set rnu
 
 vnoremap <C-c> "+y
 nnoremap <ESC> :nohlsearch<CR>:<BS><ESC>
-nnoremap <C-h> :NERDTree<CR>
-nnoremap <C-l> :q<CR><C-l>
+nnoremap <C-t> :belowright terminal<CR>
+nnoremap <C-h> :NERDTreeToggle<CR>
 nnoremap <C-n> :tabnext<CR>
-nnoremap <C-p> <C-w><C-w>
+nnoremap <C-p> <C-w>w
 nnoremap <C-f> :Files<CR>
 nnoremap <C-b> :Buffers<CR>
 nnoremap <C-c> :CocList<CR>
