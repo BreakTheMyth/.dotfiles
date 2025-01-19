@@ -19,6 +19,8 @@ sudo pacman -S \
 yay -S \
     picom-ftlabs-git \
     typora-free
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
 ## Restore all
