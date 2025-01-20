@@ -19,7 +19,7 @@ function x() {
 	7z x $1 -o$(echo $1 | awk '{sub(/\.[^.]+$/, ""); print}') 1>/dev/null
 }
 
-alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
+# alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
 
 alias wifi='iwctl station wlan0 scan && iwctl station wlan0 get-networks && echo -n "connect: " && read wifi && iwctl station wlan0 connect $wifi'
 
