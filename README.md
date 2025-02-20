@@ -5,7 +5,7 @@
 ```sh
 sudo pacman -S \
     stow \
-    fzf bat chafa imgcat xclip p7zip \
+    bash-completion fzf bat chafa imgcat xclip p7zip \
     i3 feh rofi scrot \
     kitty \
     openssh \
