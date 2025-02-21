@@ -106,6 +106,7 @@ let g:coc_global_extensions = [
 	\'coc-json',
 	\'coc-python',
 	\'coc-java',
+	\'coc-clangd',
 \]
 
 " Use tab for trigger completion with characters ahead and navigate
