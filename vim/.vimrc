@@ -60,7 +60,7 @@ vnoremap <C-c> "+y
 nnoremap <ESC> :nohlsearch<CR>:<BS><ESC>
 nnoremap <C-t> :belowright terminal<CR>
 nnoremap <C-h> :NERDTreeToggle<CR>
-nnoremap <C-n> :tabnext<CR>
+nnoremap <S-p> :tabnext<CR>
 nnoremap <C-p> <C-w>w
 nnoremap <C-f> :Files<CR>
 nnoremap <C-b> :Buffers<CR>
