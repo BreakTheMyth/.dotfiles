@@ -12,7 +12,7 @@ alias ll='ls -al'
 alias grep='grep --color=auto'
 alias mount='sudo mount -o uid=$(id -u $USER),gid=$(id -g $USER)'
 
-alias pro='env HTTPS_PROXY=http://127.0.0.1:8889 proxychains -q'
+alias pro='proxychains -q'
 alias c='xclip -selection clipboard'
 
 function x() {
