@@ -12,6 +12,7 @@ alias ll='ls -al'
 alias grep='grep --color=auto'
 alias mount='sudo mount -o uid=$(id -u $USER),gid=$(id -g $USER)'
 
+alias ss='sslocal -c ~/.config/shadowsocks/config.json'
 alias pro='proxychains -q'
 alias c='xclip -selection clipboard'
 
