@@ -12,9 +12,22 @@ alias ll='ls -al'
 alias grep='grep --color=auto'
 alias mount='sudo mount -o uid=$(id -u $USER),gid=$(id -g $USER)'
 
-alias ss='sslocal -c ~/.config/shadowsocks/config.json'
 alias pro='proxychains -q'
 alias c='xclip -selection clipboard'
+
+function ss() {
+    case $1 in
+        seturl)
+            echo "$2" > ~/.config/shadowsocks/ssurl
+            ;;
+        update)
+            ~/.config/shadowsocks/update.sh
+            ;;
+        start)
+            sslocal -c "$2"
+            ;;
+    esac
+}
 
 function x() {
 	7z x $1 -o$(echo $1 | awk '{sub(/\.[^.]+$/, ""); print}') 1>/dev/null

@@ -5,7 +5,7 @@
 ```sh
 sudo pacman -S \
     stow \
-    bash-completion fzf bat chafa imgcat xclip p7zip \
+    fzf bat chafa imgcat xclip p7zip \
     i3 feh rofi scrot \
     kitty \
     openssh \
@@ -15,7 +15,8 @@ sudo pacman -S \
     thunar \
     wayland xorg-xwayland \
     hyprland waybar hyprpaper \
-    yazi ffmpeg jq poppler fd ripgrep zoxide imagemagick
+    yazi ffmpeg jq poppler fd ripgrep zoxide imagemagick \
+    shadowsocks
 yay -S \
     picom-ftlabs-git \
     typora-free
