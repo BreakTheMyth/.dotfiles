@@ -21,6 +21,7 @@ function ss() {
             echo "$2" > ~/.config/shadowsocks/ssurl
             ;;
         update)
+            rm -rf ~/.config/shadowsocks/list/
             ~/.config/shadowsocks/update.sh
             ;;
         start)
@@ -46,7 +47,7 @@ alias gm='git commit -m'
 alias gr='git reset'
 alias gd='git diff'
 
-alias dockerd='sudo dockerd --http-proxy http://localhost:8889 --https-proxy http://localhost:8889 --no-proxy localhost,127.0.0.1'
+alias dockerd='sudo dockerd --http-proxy socks5://localhost:1080 --https-proxy socks5://localhost:1080 --no-proxy localhost,127.0.0.1'
 alias dr='docker run -id'
 alias de='docker exec -ite LANG=zh_CN.UTF-8 -e LC_ALL=zh_CN.UTF-8'
 alias dl='docker logs -f'
