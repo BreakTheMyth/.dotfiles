@@ -15,6 +15,8 @@ alias mount='sudo mount -o uid=$(id -u $USER),gid=$(id -g $USER)'
 alias pro='proxychains -q'
 alias c='xclip -selection clipboard'
 
+alias record="ffmpeg -f x11grab -framerate 60 -video_size 1920x1080 -i :0.0 -f pulse -i 0 ~/视频/$(date | tr -d ' ').mkv"
+
 function ss() {
     case $1 in
         seturl)
@@ -31,7 +33,7 @@ function ss() {
 }
 
 function x() {
-	7z x $1 -o$(echo $1 | awk '{sub(/\.[^.]+$/, ""); print}') 1>/dev/null
+	7z x $@ -o$(echo $1 | awk '{sub(/\.[^.]+$/, ""); print}') 1>/dev/null
 }
 
 # alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
