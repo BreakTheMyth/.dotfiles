@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # 获取触摸板id
 id=$(xinput list | grep "TouchPad" | awk -F '\t' '{print $2}' | tr -d 'id=')
 
