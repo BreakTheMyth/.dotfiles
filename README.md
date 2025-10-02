@@ -13,6 +13,7 @@ sudo pacman -S \
     gvim \
     thefuck \
     thunar \
+    dunst \
     wayland xorg-xwayland \
     hyprland waybar hyprpaper \
     yazi ffmpeg jq poppler fd ripgrep zoxide imagemagick \
