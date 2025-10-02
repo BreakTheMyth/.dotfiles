@@ -121,7 +121,7 @@ fi
 # You can use whatever you want as an alias, like for Mondays:
 eval $(thefuck --alias fk)
 
-[[ $XDGSESSION = 'x11' ]] & xset r rate 200 60
+[[ $XDG_SESSION_TYPE = 'x11' ]] && xset r rate 200 60
 
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
