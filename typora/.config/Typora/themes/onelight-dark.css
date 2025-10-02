@@ -1,0 +1,184 @@
+@import "onelight.css";
+
+:root {
+    --bg-color: #282c34;
+    --code-bg-color: #3a3f4a;
+    --text-color: #c3c3c3;
+    --primary-btn-text-color: var(--text-color);
+    --rawblock-edit-panel-bd: var(--code-bg-color);
+    --active-file-bg-color: #333333;
+    --window-border: 1px solid var(--active-file-bg-color);
+    --active-file-text-color: inherit;
+    --active-file-border-color: var(--main-red);
+    --side-bar-bg-color: var(--bg-color);
+    --item-hover-bg-color: rgb(from var(--bg-color) r g b / 0.8);
+    --item-hover-text-color: var(--main-red);
+    --monospace: monospace;
+    --side-bar-menu-active-tint: var(--main-green);
+    --outline-color: #7a7a7a;
+    /* ---------------->> 暗化比例 <<---------------- */
+    --darken-ratio: 80%;
+    /* ---------------->> 主题色 <<---------------- */
+    --theme-color-original: #166ff3;
+    --main-red-original: #ff6b6b;
+    --main-green-original: #2ed573;
+    --main-purple-original: #c94ae9;
+    --main-yellow-original: #f9b03d;
+    --theme-color: color-mix(in srgb, var(--theme-color-original) var(--darken-ratio), black);
+    --main-red: color-mix(in srgb, var(--main-red-original) var(--darken-ratio), black);
+    --main-green: color-mix(in srgb, var(--main-green-original) var(--darken-ratio), black);
+    --main-purple: color-mix(in srgb, var(--main-purple-original) var(--darken-ratio), black);
+    --main-yellow: color-mix(in srgb, var(--main-yellow-original) var(--darken-ratio), black);
+    --light-color: #6e6e6e;
+    --theme-light-color: #353a45;
+    --code--bg-color: #282c34;
+    --code--bg-color-light: #3d404e;
+    --border-color: var(--theme-color);
+    --border: solid 0.5px var(--theme-color)94;
+    /* ---------------->> 字体 <<---------------- */
+    --main-font-family: "Cascadia Code", "喵字果汁体", consolas, "微软雅黑", "PingFang SC", "Microsoft YaHei", sans-serif;
+    /* ---------------->> 悬浮 <<---------------- */
+    --item-bg-color-red: rgb(from var(--main-red) r g b / 0.22);
+    --item-bg-color-blue: rgb(from var(--theme-color) r g b / 0.26);
+    /* ---------------->> 阴影 <<---------------- */
+    --box-shadow: 0px 4px 4px rgba(0, 0, 0, .3);
+    --box-shadow-large: 0 8px 15px rgb(from var(--bg-color) r g b / 0.1);
+    --drop-shadow: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.5));
+    /* ---------------->> 过渡 <<---------------- */
+    --transition: box-shadow 0.3s ease, transform 0.3s ease;
+    --bg-transition: background-color 0.5s ease;
+    /* ---------------->> 圆角 <<---------------- */
+    --radius-small: 5px;
+    --radius-large: 10px;
+    --radius-xlarge: 15px;
+    /* ---------------->> 云母 <<---------------- */
+    --mica-bg: rgba(30, 30, 30, 0.75);
+    --mica-blur: blur(12px) saturate(1.1);
+    --mica-border: 1px solid rgba(100, 100, 100, 0.15);
+    --mica-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(100, 100, 100, 0.1);
+    --mica-transition: background-color 0.5s ease, box-shadow 0.5s ease;
+    /* ---------------->> Alert颜色 <<---------------- */
+    --alert-tip-original: #1f883d;
+    --alert-note-original: #0969da;
+    --alert-important-original: #8250df;
+    --alert-caution-original: #cf222e;
+    --alert-warning-original: #faad14;
+}
+
+/* 目录 */
+p.md-toc-content {
+    background: var(--code--bg-color-light);
+}
+
+/* 代码块文本 */
+pre.CodeMirror-line>span {
+    color: var(--text-color);
+}
+
+/* 引用块 */
+#write blockquote {
+    border: solid 0.5px var(--theme-color-original);
+    border-left: 5px solid var(--border-color);
+    border-left-color: var(--border-color) !important;
+    background: unset;
+}
+
+#write blockquote:hover {
+    transition: var(--bg-transition);
+    background: var(--bg-color);
+    box-shadow: var(--box-shadow-large);
+}
+
+/* Github风格警告框 */
+.md-alert-tip {
+    --border-color: color-mix(in srgb, var(--alert-tip-original) var(--darken-ratio), black);
+}
+
+.md-alert-note {
+    --border-color: color-mix(in srgb, var(--alert-note-original) var(--darken-ratio), black);
+}
+
+.md-alert-important {
+    --border-color: color-mix(in srgb, var(--alert-important-original) var(--darken-ratio), black);
+}
+
+.md-alert-caution {
+    --border-color: color-mix(in srgb, var(--alert-caution-original) var(--darken-ratio), black);
+}
+
+.md-alert-warning {
+    --border-color: color-mix(in srgb, var(--alert-warning-original) var(--darken-ratio), black);
+}
+
+.md-alert {
+    background: unset !important;
+    box-shadow: unset;
+}
+
+.md-alert:hover {
+    background: var(--bg-color) !important;
+}
+
+
+
+/* 代码块 */
+.md-fences {
+    box-shadow: unset;
+}
+
+/* 行内代码 */
+#write code {
+    background-color: var(--code-bg-color);
+}
+
+/* 表格 */
+#write table tr th {
+    color: var(--main-red-original);
+}
+
+
+/* 一体化菜单选项 */
+.megamenu-menu-list li a {
+    color: var(--text-color) !important;
+}
+
+/* 菜单按钮 */
+.dropdown-menu,
+.menu-item-container a.menu-style-btn {
+    background-color: var(--mica-bg) !important;
+}
+
+
+/* 一体化菜单背景 */
+.megamenu-content,
+.megamenu-opened header {
+    background: var(--bg-color);
+}
+
+/* 一体化菜单标题 */
+.megamenu-menu-header {
+    background: var(--bg-color);
+}
+
+/* 最近使用文件列表 */
+#recent-file-panel tbody tr:nth-child(2n-1) {
+    background-color: unset;
+}
+
+/* 最近使用文件操作按钮 */
+#recent-file-panel-action-btn {
+    background-color: unset;
+}
+
+
+/* 有序列表序号 */
+#write .ol>.li:before,
+#write ol>li:before {
+    color: var(--text-color);
+}
+
+/* 源码切换按钮 */
+.typora-sourceview-on #toggle-sourceview-btn {
+    background: transparent;
+}
