@@ -44,7 +44,7 @@ alias gc='git clone'
 alias gb='git branch'
 alias gl='git log --graph --all --decorate'
 alias gs='git status'
-alias ga='git add .'
+alias ga='git add'
 alias gm='git commit -m'
 alias gr='git reset'
 alias gd='git diff'
@@ -66,6 +66,8 @@ alias display='xrandr --output VNC-0 --mode'
 eval "$(fzf --bash)"
 export FZF_DEFAULT_OPTS='--exact --height 70% --preview "~/.fzf-preview.sh {}"'
 export FZF_COMPLETION_TRIGGER='/'
+
+export MAKEFILES='~/.global.mk'
 
 PS1='\n┏$(__git_ps1 "\[\e[30;41;1m\][%s]\[\e[0m\]\n┣")\[\e[35;1m\][\w]\[\e[0m\]\n┗━✡ '
 
