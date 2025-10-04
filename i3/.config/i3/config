@@ -69,10 +69,10 @@ bindsym $mod+k focus up
 bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
+# bindsym $mod+Left focus left
+# bindsym $mod+Down focus down
+# bindsym $mod+Up focus up
+# bindsym $mod+Right focus right
 
 # move focused window
 bindsym $mod+Shift+h move left
@@ -205,6 +205,8 @@ default_border pixel 3
 
 bindsym $mod+F2 exec rofi -show drun -theme /usr/share/rofi/themes/material.rasi
 bindsym Print exec scrot -e 'mv $f ~/图片/scrot'
+bindsym $mod+Up exec ~/.config/i3/changeVolume.sh 2dB+ unmute
+bindsym $mod+Down exec ~/.config/i3/changeVolume.sh 2dB- unmute
 
 exec --no-startup-id feh --bg-scale /home/yuxing/.wallpaper
 exec --no-startup-id fcitx5
