@@ -14,6 +14,7 @@ sudo pacman -S \
     thefuck \
     thunar \
     dunst \
+    alsa-utils \
     wayland xorg-xwayland \
     hyprland waybar hyprpaper \
     yazi ffmpeg jq poppler fd ripgrep zoxide imagemagick \
