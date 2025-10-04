@@ -3,3 +3,4 @@
 	email = pinks302@163.com
 [core]
 	quotepath = false
+	whitespace = cr-at-eol
