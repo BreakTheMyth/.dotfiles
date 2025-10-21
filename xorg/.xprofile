@@ -1,5 +1,8 @@
 #!/bin/bash
 
+export LANG=zh_CN.UTF-8
+export LC_ALL=zh_CN.UTF-8
+
 # 获取触摸板id
 id=$(xinput list | grep "TouchPad" | awk -F '\t' '{print $2}' | tr -d 'id=')
 
