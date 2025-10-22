@@ -55,7 +55,7 @@ bindsym $mod+Ctrl+t exec kitty
 bindsym $mod+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run
+# bindsym $mod+d exec --no-startup-id dmenu_run
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -205,8 +205,8 @@ default_border pixel 3
 
 bindsym $mod+F2 exec rofi -show drun -theme /usr/share/rofi/themes/material.rasi
 bindsym Print exec scrot -e 'mv $f ~/图片/scrot'
-bindsym $mod+Up exec ~/.config/i3/changeVolume.sh 2dB+ unmute
-bindsym $mod+Down exec ~/.config/i3/changeVolume.sh 2dB- unmute
+bindsym $mod+u exec ~/.config/i3/changeVolume.sh 2dB+ unmute
+bindsym $mod+d exec ~/.config/i3/changeVolume.sh 2dB- unmute
 
 exec --no-startup-id feh --bg-scale /home/yuxing/.wallpaper
 exec --no-startup-id fcitx5
